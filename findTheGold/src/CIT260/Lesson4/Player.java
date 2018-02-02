@@ -6,6 +6,7 @@
 package CIT260.Lesson4;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,7 +17,9 @@ public class Player implements Serializable {
     
     // class variables
     private String name;
-
+    private ArrayList<Game> games = new ArrayList<Game>();
+    
+    // inserted getters and setters
     public Player(String name) {
         this.name = name;
     }
@@ -28,6 +31,16 @@ public class Player implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    public ArrayList<Game> getGames() {
+        return games;
+    }
+
+    public void setGames(ArrayList<Game> games) {
+        this.games = games;
+    }
+    
+    
 
     @Override
     public int hashCode() {

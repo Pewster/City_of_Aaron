@@ -25,7 +25,9 @@ public class Game implements Serializable {
     private ArrayList<ListItem> animals;
     private ArrayList<ListItem> tools
     private ArrayList<ListItem> provisions;
-
+    private Player player;
+    
+    // inserted constructors
     public Game(Map theMap, Player thePlayer, CropData cropData, TeamMember[] team, ArrayList<ListItem> animals, ArrayList<ListItem> tools, ArrayList<ListItem> provisions) {
         this.theMap = theMap;
         this.thePlayer = thePlayer;
@@ -35,9 +37,12 @@ public class Game implements Serializable {
         this.tools = tools;
         this.provisions = provisions;
     }
-    
-    
 
+    public Game(Player player) {
+        this.player = player;
+    }
+    
+    // inserted getters and setters
     public Map getTheMap() {
         return theMap;
     }
@@ -93,6 +98,16 @@ public class Game implements Serializable {
     public void setProvisions(ArrayList<ListItem> provisions) {
         this.provisions = provisions;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+    
+    
 
     @Override
     public int hashCode() {
