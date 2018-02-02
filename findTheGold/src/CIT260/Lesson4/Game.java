@@ -22,27 +22,24 @@ public class Game implements Serializable {
     private Player thePlayer;
     private CropData cropData;
     private TeamMembers team[];
-    private ArrayList<ListItem> animals;
+/*  private ArrayList<ListItem> animals;
     private ArrayList<ListItem> tools
     private ArrayList<ListItem> provisions;
-    private Player player;
+*/
+private Player player;
     
     // inserted constructors
-    public Game(Map theMap, Player thePlayer, CropData cropData, TeamMembers[] team, ArrayList<ListItem> animals, ArrayList<ListItem> tools, ArrayList<ListItem> provisions) {
+    public Game(Map theMap, Player thePlayer, CropData cropData, TeamMembers[] team, ArrayList<ArrayList> animals, ArrayList<ArrayList> tools, ArrayList<ArrayList> provisions) {
         this.theMap = theMap;
         this.thePlayer = thePlayer;
         this.cropData = cropData;
         this.team = team;
-        this.animals = animals;
+/*      this.animals = animals;
         this.tools = tools;
         this.provisions = provisions;
-    }
+*/    }
 
     public Game(Player player) {
-        this.player = player;
-    }
-    
-        public Game(C player) {
         this.player = player;
     }
     
@@ -79,30 +76,31 @@ public class Game implements Serializable {
         this.team = team;
     }
 
-    public ArrayList<ListItem> getAnimals() {
+/*
+    public ArrayList<ArrayList> getAnimals() {
         return animals;
     }
 
-    public void setAnimals(ArrayList<ListItem> animals) {
+    public void setAnimals(ArrayList<ArrayList> animals) {
         this.animals = animals;
     }
 
-    public ArrayList<ListItem> getTools() {
+    public ArrayList<ArrayList> getTools() {
         return tools;
     }
 
-    public void setTools(ArrayList<ListItem> tools) {
+    public void setTools(ArrayList<ArrayList> tools) {
         this.tools = tools;
     }
 
-    public ArrayList<ListItem> getProvisions() {
+    public ArrayList<ArrayList> getProvisions() {
         return provisions;
     }
 
-    public void setProvisions(ArrayList<ListItem> provisions) {
+    public void setProvisions(ArrayList<ArrayList> provisions) {
         this.provisions = provisions;
     }
-
+*/
     public Player getPlayer() {
         return player;
     }
@@ -120,9 +118,11 @@ public class Game implements Serializable {
         hash = 53 * hash + Objects.hashCode(this.thePlayer);
         hash = 53 * hash + Objects.hashCode(this.cropData);
         hash = 53 * hash + Arrays.deepHashCode(this.team);
+/*
         hash = 53 * hash + Objects.hashCode(this.animals);
         hash = 53 * hash + Objects.hashCode(this.tools);
         hash = 53 * hash + Objects.hashCode(this.provisions);
+ */
         return hash;
     }
 
@@ -150,7 +150,7 @@ public class Game implements Serializable {
         if (!Arrays.deepEquals(this.team, other.team)) {
             return false;
         }
-        if (!Objects.equals(this.animals, other.animals)) {
+/*        if (!Objects.equals(this.animals, other.animals)) {
             return false;
         }
         if (!Objects.equals(this.tools, other.tools)) {
@@ -159,12 +159,13 @@ public class Game implements Serializable {
         if (!Objects.equals(this.provisions, other.provisions)) {
             return false;
         }
+*/        
         return true;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "theMap=" + theMap + ", thePlayer=" + thePlayer + ", cropData=" + cropData + ", team=" + team + ", animals=" + animals + ", tools=" + tools + ", provisions=" + provisions + '}';
+        return "Game{" + "theMap=" + theMap + ", thePlayer=" + thePlayer + ", cropData=" + cropData + ", team=" + team + /* ", animals=" + animals + ", tools=" + tools + ", provisions=" + provisions + */'}';
     }
     
 }
