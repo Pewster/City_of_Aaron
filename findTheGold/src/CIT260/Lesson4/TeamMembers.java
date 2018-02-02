@@ -16,17 +16,13 @@ public class TeamMembers {
     // enum attributes
     private String name;
     private String title;
-    
-<<<<<<< HEAD
     // constructors
 
     private TeamMembers(String name) {
         this.name = name;
     }
     //getters and setters
-=======
    //getters and setters
->>>>>>> 1e6c3cf69295d11dbb2b815e21423f446eabe2a8
 
     public String getName() {
         return name;
@@ -35,8 +31,6 @@ public class TeamMembers {
     public void setName(String name) {
         this.name = name;
     }
-<<<<<<< HEAD
-=======
 
     public String getTitle() {
         return title;
@@ -83,11 +77,4 @@ public class TeamMembers {
     public String toString() {
         return "TeamMembers{" + "name=" + name + ", title=" + title + '}';
     }
-        
-       
-    
-        
-    
-
->>>>>>> 1e6c3cf69295d11dbb2b815e21423f446eabe2a8
 }
