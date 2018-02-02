@@ -21,14 +21,14 @@ public class Game implements Serializable {
     private Map theMap;
     private Player thePlayer;
     private CropData cropData;
-    private TeamMember team[];
+    private TeamMembers team[];
     private ArrayList<ListItem> animals;
     private ArrayList<ListItem> tools
     private ArrayList<ListItem> provisions;
     private Player player;
     
     // inserted constructors
-    public Game(Map theMap, Player thePlayer, CropData cropData, TeamMember[] team, ArrayList<ListItem> animals, ArrayList<ListItem> tools, ArrayList<ListItem> provisions) {
+    public Game(Map theMap, Player thePlayer, CropData cropData, TeamMembers[] team, ArrayList<ListItem> animals, ArrayList<ListItem> tools, ArrayList<ListItem> provisions) {
         this.theMap = theMap;
         this.thePlayer = thePlayer;
         this.cropData = cropData;
@@ -39,6 +39,10 @@ public class Game implements Serializable {
     }
 
     public Game(Player player) {
+        this.player = player;
+    }
+    
+        public Game(C player) {
         this.player = player;
     }
     
@@ -67,11 +71,11 @@ public class Game implements Serializable {
         this.cropData = cropData;
     }
 
-    public TeamMember[] getTeam() {
+    public TeamMembers[] getTeam() {
         return team;
     }
 
-    public void setTeam(TeamMember[] team) {
+    public void setTeam(TeamMembers[] team) {
         this.team = team;
     }
 
