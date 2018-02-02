@@ -5,6 +5,8 @@
  */
 package CIT260.Lesson4;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Kol24
@@ -26,6 +28,7 @@ class CropData {
     private int numStarved;
     private int eatenByRats;
     private int wheatForPeople;
+    private ArrayList<Game> games = new ArrayList<Game>();
 
     public CropData(int year, int popuation, int acresOwned, int cropYield, int wheatInStore, int numberWhoDied, int newPeople, int harvest, int harvestAfterOffering, int offering, int offeringBushels, int peopleFed, int acresPlanted, int numStarved, int eatenByRats, int wheatForPeople) {
         this.year = year;

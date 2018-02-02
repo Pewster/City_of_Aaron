@@ -9,7 +9,7 @@ package CIT260.Lesson4;
  *
  * @author pewst
  */
-public enum TeamMembers {
+public class TeamMembers {
     
     // enum attributes
     private String name;
@@ -19,8 +19,6 @@ public enum TeamMembers {
     private TeamMembers(String name) {
         this.name = name;
     }
-    
-
     //getters and setters
 
     public String getName() {
@@ -30,7 +28,4 @@ public enum TeamMembers {
     public void setName(String name) {
         this.name = name;
     }
-        
-    
-
 }
