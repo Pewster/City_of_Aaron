@@ -5,13 +5,14 @@
  */
 package CIT260.Lesson4;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Kol24
  */
-public class ListItem {
+public class ListItem implements Serializable{
     
     private String name;
     private int number;
