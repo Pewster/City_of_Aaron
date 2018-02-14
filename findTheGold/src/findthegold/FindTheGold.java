@@ -5,6 +5,8 @@
  */
 package findthegold;
 
+import CIT260.Lesson4.Player;
+
 /**
  *
  * @author pewst
@@ -15,7 +17,14 @@ public class FindTheGold {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player();
+        
+        player)ne.setName("Fred Flintstone");
+        
+        String playerOneName = playerOne.getName();
+        
+        System.out.println("Name = " + playerOneName)
+        
     }
     
 }
