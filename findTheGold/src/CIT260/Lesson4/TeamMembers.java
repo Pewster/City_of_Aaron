@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author pewst
  */
-public class TeamMembers {
+public enum TeamMembers {
     
     // enum attributes
     private String name;
