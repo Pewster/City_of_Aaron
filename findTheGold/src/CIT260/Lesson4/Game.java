@@ -19,25 +19,21 @@ public class Game implements Serializable {
     
     // Class variables
     private Map theMap;
-    private Player thePlayer;
+    private Player player;
     private CropData cropData;
-    private TeamMembers team[];
-/*  private ArrayList<ListItem> animals;
-    private ArrayList<ListItem> tools
+    private ArrayList<ListItem> animals;
+    private ArrayList<ListItem> tools;
     private ArrayList<ListItem> provisions;
-*/
-private Player player;
     
     // inserted constructors
-    public Game(Map theMap, Player thePlayer, CropData cropData, TeamMembers[] team, ArrayList<ArrayList> animals, ArrayList<ArrayList> tools, ArrayList<ArrayList> provisions) {
+    public Game(Map theMap, Player player, CropData cropData, ArrayList<ArrayList> animals, ArrayList<ArrayList> tools, ArrayList<ArrayList> provisions) {
         this.theMap = theMap;
-        this.thePlayer = thePlayer;
+        this.player = player;
         this.cropData = cropData;
-        this.team = team;
-/*      this.animals = animals;
+        this.animals = animals;
         this.tools = tools;
         this.provisions = provisions;
-*/    }
+      }
 
     public Game(Player player) {
         this.player = player;
@@ -52,12 +48,12 @@ private Player player;
         this.theMap = theMap;
     }
 
-    public Player getThePlayer() {
-        return thePlayer;
+    public Player getPlayer() {
+        return player;
     }
 
-    public void setThePlayer(Player thePlayer) {
-        this.thePlayer = thePlayer;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
     public CropData getCropData() {
@@ -68,15 +64,6 @@ private Player player;
         this.cropData = cropData;
     }
 
-    public TeamMembers[] getTeam() {
-        return team;
-    }
-
-    public void setTeam(TeamMembers[] team) {
-        this.team = team;
-    }
-
-/*
     public ArrayList<ArrayList> getAnimals() {
         return animals;
     }
@@ -100,29 +87,17 @@ private Player player;
     public void setProvisions(ArrayList<ArrayList> provisions) {
         this.provisions = provisions;
     }
-*/
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-    
-    
-
-    @Override
+  
+       @Override
     public int hashCode() {
         int hash = 3;
         hash = 53 * hash + Objects.hashCode(this.theMap);
-        hash = 53 * hash + Objects.hashCode(this.thePlayer);
+        hash = 53 * hash + Objects.hashCode(this.player);
         hash = 53 * hash + Objects.hashCode(this.cropData);
-        hash = 53 * hash + Arrays.deepHashCode(this.team);
-/*
         hash = 53 * hash + Objects.hashCode(this.animals);
         hash = 53 * hash + Objects.hashCode(this.tools);
         hash = 53 * hash + Objects.hashCode(this.provisions);
- */
+
         return hash;
     }
 
@@ -141,16 +116,14 @@ private Player player;
         if (!Objects.equals(this.theMap, other.theMap)) {
             return false;
         }
-        if (!Objects.equals(this.thePlayer, other.thePlayer)) {
+        if (!Objects.equals(this.player, other.player)) {
             return false;
         }
         if (!Objects.equals(this.cropData, other.cropData)) {
             return false;
         }
-        if (!Arrays.deepEquals(this.team, other.team)) {
-            return false;
-        }
-/*        if (!Objects.equals(this.animals, other.animals)) {
+        
+        if (!Objects.equals(this.animals, other.animals)) {
             return false;
         }
         if (!Objects.equals(this.tools, other.tools)) {
@@ -159,13 +132,13 @@ private Player player;
         if (!Objects.equals(this.provisions, other.provisions)) {
             return false;
         }
-*/        
+         
         return true;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "theMap=" + theMap + ", thePlayer=" + thePlayer + ", cropData=" + cropData + ", team=" + team + /* ", animals=" + animals + ", tools=" + tools + ", provisions=" + provisions + */'}';
+        return "Game{" + "theMap=" + theMap + ", player=" + player + ", cropData=" + cropData +  ", animals=" + animals + ", tools=" + tools + ", provisions=" + provisions + */'}';
     }
     
 }
