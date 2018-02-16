@@ -5,18 +5,20 @@
  */
 package CIT260.Lesson4;
 
+import java.util.Objects;
+
 /**
  *
  * @author pewst
  */
 
-public enum TeamMembers {
+public enum class TeamMembers {
 
     // enum attributes
     private String name;
     private String title;
     
-// constructors
+    // constructors
     private TeamMembers(String name) {
         this.name = name;
     }
