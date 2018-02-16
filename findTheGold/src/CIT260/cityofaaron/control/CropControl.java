@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CIT260Control;
+package CIT260.cityofaaron.control;
 
 import java.util.Random;
-import CIT260.Lesson4.Game;
+import CIT260.cityofaaron.beans.CropData;
 /**
  *
  * @author Kol24
@@ -25,7 +25,7 @@ private static final int LAND_RANGE = 10;
 //calcLandCost() Method
 //purpose: Calculate a random land price between 17 and 26 bushel's per acre
 //returns landPrice
-public static int calcLandCost(){
+public static int buyLand(){
     int landPrice = random.nextInt(LAND_RANGE) + LAND_BASE;
     return landPrice;
 }
@@ -35,7 +35,7 @@ public static int calcLandCost(){
 // Parameters: The price of land and the number of acres to buy
 
 // Returns: The amount of land after the purchase & The amount of wheat after purchase
-public int buyLand(int priceOfLand, int acresToBuy, CropData, cropData){
+public int buyLand(int priceOfLand, int acresToBuy, CropData){
 /*The problem to be solved:
 The currency is wheat and the price of land is random. If the price of land is p and the acres we want to buy is a, then the number of acres we can buy is the wheatInStore, w divided by the priceOfLand.  The acres owned is o and is the product of the price of land and the acres to buy.
 a = w / p
@@ -50,21 +50,21 @@ p x a + o = o
     if(acresToBuy < 0)
         return -1;
 //if wheatInStore < acresToBuy * priceOfLand < zero, return -1
-    int owned = cropData.getAcresOwned();
-    if(acresToBuy*priceOfLand > acresOwned)
+    int owned = CropData.getAcresOwned();
+    if(acresToBuy*priceOfLand > owned)
         return -1;        
 //acresOwned = acresOwned + acresToBuy
     owned += acresToBuy;
-    cropData.setAcresOwned(owned);
+    CropData.setAcresOwned(owned);
 //wheatInStore = wheatInStore – (acresToBuy*priceOfLand)
-    int wheat = cropData.getWheatInStore();
+    int wheat = CropData.getWheatInStore();
     wheat -= (acresToBuy * priceOfLand);
-    cropData.setWheatInStore(wheat);
+    CropData.setWheatInStore(wheat);
 //return acresOwned
     return owned;
 }
 
-@Test
+//Test
     public void testBuyLand(){
         System.out.println("buyLand");
         CropData theCrops = new CropData();
@@ -73,7 +73,6 @@ p x a + o = o
         int toBuy = 10;
         int landPrice = 15;
         int expResult = 2790;
-        int result = CropDataControl.buyLand(landPrice, toBuy, theCrops);
-        assertEquals(expResult, result);
+        int result = buyLand(landPrice, toBuy, theCrops);
     }
 }

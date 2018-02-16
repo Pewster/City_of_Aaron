@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CIT260.Lesson4;
+package CIT260.cityofaaron.beans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Kol24
  */
-class CropData implements Serializable{
+public class CropData implements Serializable{
     private int year;
     private int popuation;
     private int acresOwned;
@@ -48,6 +48,10 @@ class CropData implements Serializable{
         this.numStarved = numStarved;
         this.eatenByRats = eatenByRats;
         this.wheatForPeople = wheatForPeople;
+    }
+
+    public CropData() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
