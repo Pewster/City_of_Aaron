@@ -77,7 +77,25 @@ p x a + o = o
         int result = buyLand(landPrice, toBuy, theCrops);
     }
 
-
+// to feed the people by joseph orton(Kol24)
+    
+//Pseudo-code for public int feedPeople(wheatInStore, wheatForPeople, population) method:
+    public int feedPeople(int wheatInStore, CropData cropData){
+        int wheatForPeople;
+//if wheatForPeople < 0, return -1
+        if(wheatForPeople < 0)
+            return -1;
+//if wheatInStore < wheatForPeople return -1
+    int wheatInStore = cropData.getWheatInStore();
+        if(wheatForPeople > wheatInStore)
+            return -1;
+//wheatInStore = wheatInStore - wheatForPeople
+    wheatInStore -= wheatForPeople
+    cropData.setWheatInStore(wheatInStore);
+// wheat for people
+    cropData.setWheatForPeople();
+//return wheatInStore
+    return wheatInStore;
 
 //PayOffering
 //Max Scott
@@ -120,15 +138,4 @@ p x a + o = o
         }
       return offering;
     }
-
-
-
-
-
-
-
-
-
-
-
 }
