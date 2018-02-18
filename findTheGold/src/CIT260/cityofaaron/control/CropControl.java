@@ -5,6 +5,7 @@
  */
 package CIT260.cityofaaron.control;
 
+import java.util.Scanner;
 import java.util.Random;
 import CIT260.cityofaaron.beans.CropData;
 /**
@@ -75,4 +76,60 @@ p x a + o = o
         int expResult = 2790;
         int result = buyLand(landPrice, toBuy, theCrops);
     }
+
+
+
+//PayOffering
+//Max Scott
+    
+ /*
+    The user enters the percentage of the harvest they want to pay in offerings. The method makes sure that the value is a positive number less than 100 and saves the value. 
+    
+   
+    
+    */   
+    public static int payOffering(int harvest)
+    {
+       // Ask user the percentage. Don't take anything below 0 or above 100. 
+        
+        System.out.println("What percentage of the harvest will you offer? ");
+            
+        Scanner pc = new Scanner(System.in);
+        int percentage = pc.nextInt();
+        //I'll declare offering here, but assign it a value in the if statements. 
+        int offering = 0;     
+        
+        
+        
+        if(percentage > 0 && percentage < 100)
+        {
+            offering = harvest * (percentage / 100);
+            System.out.println("You've offered "+offering+" bushels from your harvest.\n");  
+        }
+        
+        else
+        {
+         System.out.println("You must give a valid offering. What percentage of your harvest will you give? ");     
+        
+         percentage = pc.nextInt();
+            if(percentage > 0 && percentage < 100)
+           {
+               offering = harvest * (percentage / 100);
+               System.out.println("You've offered "+offering+" bushels from your harvest.\n");  
+           }
+        }
+            
+    return offering;
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
