@@ -118,8 +118,7 @@ p x a + o = o
                System.out.println("You've offered "+offering+" bushels from your harvest.\n");  
            }
         }
-            
-    return offering;
+      return offering;
     }
 
 
