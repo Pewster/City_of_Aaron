@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author pewst
  */
 
-public /*enum*/ class TeamMembers {
+public /**enum**/ class TeamMembers {
 
     // enum attributes
     private String name;
