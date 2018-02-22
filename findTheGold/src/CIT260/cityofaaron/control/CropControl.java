@@ -96,7 +96,7 @@ p x a + o = o
     cropData.setWheatForPeople();
 //return wheatInStore
     return wheatInStore;
-
+    }
 //PayOffering
 //Max Scott
     
@@ -138,4 +138,37 @@ p x a + o = o
         }
       return offering;
     }
+     public static int acresPlanted(int population, int wheatInStore, int acresOwned) {
+         
+         // Code by Hayden Pew
+         /* Purpose : To determine how many acres can be planted
+         
+         Problem : To determine the number of acres to be planted. 
+         You must have enough wheatInStore because it takes 
+        1/2 bushels for each acre planted. And the number 
+        of acres planted cannot be more then the population
+        times 10 because each citizen can work up to 10 acres.
+        There also must be enough acres owned, so the number
+        of potential acres to be planted is the population 
+        times ten and if that is less then or equal to the 
+        acresOwned then it will work */
+         
+        int acresByWheat = wheatInStore * 2;
+        int acresByPop = population *10;
+        
+        if (acresByWheat > acresOwned && acresByPop > acresOwned)
+        { 
+            return acresOwned;
+        }
+        // if that failes then .....
+        if (acresByWheat < acresOwned && acresByWheat < acresByPop)
+        {
+            return acresByWheat
+        }
+        return acresByPop
+
+        }     
+         
+        
+  
 }
