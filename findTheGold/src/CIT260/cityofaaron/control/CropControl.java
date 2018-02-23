@@ -157,7 +157,7 @@ p x a + o = o
         acresOwned then it will work */
          
         int acresByWheat = wheatInStore * 2;
-        int acresByPop = population *10;
+        int acresByPop = population * 10;
         
         if (acresByWheat > acresOwned && acresByPop > acresOwned)
         { 
@@ -165,11 +165,11 @@ p x a + o = o
         }
         else if (acresByWheat < acresOwned && acresByWheat < acresByPop)
         {
-            return acresByWheat
+            return acresByWheat;
         }
         else 
         {
-            return acresByPop
+            return acresByPop;
         }
     }     
          
