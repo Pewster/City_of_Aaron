@@ -138,7 +138,10 @@ p x a + o = o
         }
       return offering;
     }
-     public static int acresPlanted(int population, int wheatInStore, int acresOwned) {
+    
+    
+    public static int acresPlanted(int population, int wheatInStore, int acresOwned) 
+    {
          
          // Code by Hayden Pew
          /* Purpose : To determine how many acres can be planted
@@ -160,14 +163,15 @@ p x a + o = o
         { 
             return acresOwned;
         }
-        // if that failes then .....
-        if (acresByWheat < acresOwned && acresByWheat < acresByPop)
+        else if (acresByWheat < acresOwned && acresByWheat < acresByPop)
         {
             return acresByWheat
         }
-        return acresByPop
-
-        }     
+        else 
+        {
+            return acresByPop
+        }
+    }     
          
         
   
