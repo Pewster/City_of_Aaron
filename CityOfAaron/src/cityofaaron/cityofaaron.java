@@ -8,6 +8,7 @@ package cityofaaron;
 import View.*;
 import beans.*;
 import java.io.PrintWriter;
+import view.GameMenuView;
 
 
 /**
@@ -38,7 +39,9 @@ public class cityofaaron
         MainMenuView mmv = new MainMenuView();
         mmv.DisplayMenuView();
         
-              
+        //Adding GameMenuView and importing package.
+        GameMenuView gmv = new GameMenuView();
+        gmv.displayMenuView();
     }
     
 }
