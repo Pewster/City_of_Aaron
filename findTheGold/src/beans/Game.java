@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CIT260.cityofaaron.beans;
+package beans;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -26,17 +26,14 @@ public class Game implements Serializable {
     private ArrayList<ListItem> provisions;
     
     // inserted constructors
-    public Game(Map theMap, Player player, CropData cropData, ArrayList<ArrayList> animals, ArrayList<ArrayList> tools, ArrayList<ArrayList> provisions) {
+    public Game(Map theMap, Player player, CropData cropData, ArrayList<ArrayList> animals, ArrayList<ArrayList> tools, ArrayList<ArrayList> provisions) 
+    {
         this.theMap = theMap;
         this.player = player;
         this.cropData = cropData;
         this.animals = animals;
         this.tools = tools;
         this.provisions = provisions;
-      }
-
-    public Game(Player player) {
-        this.player = player;
     }
     
     // inserted getters and setters

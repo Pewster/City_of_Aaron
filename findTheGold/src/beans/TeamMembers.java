@@ -3,24 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CIT260.cityofaaron.beans;
+package beans;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
- * @author Kol24
+ * @author pewst
  */
-public class ListItem implements Serializable{
-    
-    private String name;
-    private int number;
 
-    public ListItem(String name, int number) {
+public /**enum**/ class TeamMembers {
+
+    // enum attributes
+    private String name;
+    private String title;
+    
+    // constructors
+    private TeamMembers(String name) {
         this.name = name;
-        this.number = number;
     }
+   
+    //getters and setters
+    //getters and setters
 
     public String getName() {
         return name;
@@ -30,19 +34,21 @@ public class ListItem implements Serializable{
         this.name = name;
     }
 
-    public int getNumber() {
-        return number;
+    public String getTitle() {
+        return title;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setTitle(String title) {
+        this.title = title;
     }
+    
+    // equals and hashcodes
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + this.number;
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.name);
+        hash = 97 * hash + Objects.hashCode(this.title);
         return hash;
     }
 
@@ -57,20 +63,20 @@ public class ListItem implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final ListItem other = (ListItem) obj;
-        if (this.number != other.number) {
-            return false;
-        }
+        final TeamMembers other = (TeamMembers) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
+        if (!Objects.equals(this.title, other.title)) {
+            return false;
+        }
         return true;
-    }
+        }
+    
+        // to string
 
     @Override
     public String toString() {
-        return "ListItem{" + "name=" + name + ", number=" + number + '}';
+        return "TeamMembers{" + "name=" + name + ", title=" + title + '}';
     }
-    
-    
 }

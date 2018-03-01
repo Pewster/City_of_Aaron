@@ -5,26 +5,40 @@
  */
 package cityofaaron;
 
-import CIT260.cityofaaron.beans.Player;
+import View.*;
+import beans.*;
+import java.io.PrintWriter;
+
 
 /**
  *
  * @author pewst
  */
-public class cityofaaron {
+public class cityofaaron 
+{
+    //variable for keeping a reference to the game object
+    private static Game theGame = null;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Player playerOne = new Player();
+    //getters and setters
+    public static Game getTheGame() {
+        return theGame;
+    }
+
+    public static void setTheGame(Game theGame) {
+        cityofaaron.theGame = theGame;
+    }
+    
+    
+
+    //main function - entry point for the program
+    //runs the main menu
+    public static void main(String[] args) 
+    {               
         
-        player)ne.setName("Fred Flintstone");
+        MainMenuView mmv = new MainMenuView();
+        mmv.DisplayMenuView();
         
-        String playerOneName = playerOne.getName();
-        
-        System.out.println("Name = " + playerOneName)
-        
+              
     }
     
 }

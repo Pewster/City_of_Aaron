@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CIT260.cityofaaron.control;
+package control;
 
 import java.util.Scanner;
 import java.util.Random;
-import CIT260.cityofaaron.beans.CropData;
+import beans.CropData;
 /**
  *
  * @author Kol24
