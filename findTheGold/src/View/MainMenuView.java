@@ -120,7 +120,7 @@ public class MainMenuView
         Game theGame = new Game;
         
         //save a reference to it in the Game class.
-        find
+        
     }
     
     //The startSavedGame method
